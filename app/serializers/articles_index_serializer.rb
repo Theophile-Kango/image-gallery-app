@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ArticlesIndexSerializer < ActiveModel::Serializer
   attributes :id, :title, :teaser, :date
 
