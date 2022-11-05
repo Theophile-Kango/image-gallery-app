@@ -6,6 +6,6 @@ Rails.application.routes.draw do
     sessions: 'api/sessions'
   }
   namespace :api do
-    resources :image_galeries
+    resources :image_galleries
   end
 end

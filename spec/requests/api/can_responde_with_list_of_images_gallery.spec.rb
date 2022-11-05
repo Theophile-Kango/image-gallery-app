@@ -1,7 +1,4 @@
 # frozen_string_literal: true
-
-require 'rails_helper'
-
 RSpec.describe 'GET /api/image_galeries', type: :request do
   describe 'successfully' do
     let!(:gallery1) do
@@ -16,7 +13,7 @@ RSpec.describe 'GET /api/image_galeries', type: :request do
       create(:gallery, title: 'Third Article', description: 'test uploader 3', image: 'ttttt', created_at: Time.now)
     end
     before do
-      get '/api/image_galeries'
+      get '/api/image_galleries'
     end
 
     it 'is expected to return 200 response status' do

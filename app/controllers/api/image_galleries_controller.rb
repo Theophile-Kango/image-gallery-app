@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Api
-  class ImagesController < ApplicationController
+  class ImageGalleriesController < ApplicationController
     before_action :authenticate_user!
 
     def index
@@ -14,7 +14,9 @@ module Api
     end
 
     def create
-      # img = Cloudinary::Uploader.upload(params[:image])
+      img = Cloudinary::Uploader.upload(params[:image])
+      gallery = current_user.image_galleries.create(title: params[:title], description: params[:description], image: img)
+      render json: gallery
     end
   end
 end
