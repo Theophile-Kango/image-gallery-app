@@ -11,6 +11,7 @@ gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
+gem 'cloudinary'
 
 group :development, :test do
   gem 'coveralls', require: false
@@ -18,6 +19,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
+  gem 'dotenv-rails'
 end
 
 group :development do

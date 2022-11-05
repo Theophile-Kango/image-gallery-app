@@ -5,6 +5,6 @@ Rails.application.routes.draw do
     sessions: 'api/sessions'
   }
   namespace :api do
-    resources :image_galeries, only: [:index]
+    resources :image_galeries
   end
 end
