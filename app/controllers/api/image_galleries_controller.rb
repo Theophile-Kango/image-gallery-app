@@ -6,7 +6,7 @@ module Api
 
     def index
       images = ImageGallery.all.most_recent
-      if articles == []
+      if images == []
         render json: { images: images }, status: 204
       else
         render json: images, each_serializer: ImagesIndexSerializer
