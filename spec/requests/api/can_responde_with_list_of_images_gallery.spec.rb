@@ -1,10 +1,20 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
 RSpec.describe 'GET /api/image_galeries', type: :request do
   describe 'successfully' do
-    let!(:gallery1) { create(:gallery, title: 'Second Article', description: 'test uploader 1', image: 'ttttt', created_at: Time.now - 100_000) }
-    let!(:gallery2) { create(:gallery, title: 'First Article', description: 'test uploader 2', image: 'ttttt', created_at: Time.now - 200_000) }
-    let!(:gallery3) { create(:gallery, title: 'Third Article', description: 'test uploader 3', image: 'ttttt', created_at: Time.now) }
+    let!(:gallery1) do
+      create(:gallery, title: 'Second Article', description: 'test uploader 1', image: 'ttttt',
+                       created_at: Time.now - 100_000)
+    end
+    let!(:gallery2) do
+      create(:gallery, title: 'First Article', description: 'test uploader 2', image: 'ttttt',
+                       created_at: Time.now - 200_000)
+    end
+    let!(:gallery3) do
+      create(:gallery, title: 'Third Article', description: 'test uploader 3', image: 'ttttt', created_at: Time.now)
+    end
     before do
       get '/api/image_galeries'
     end

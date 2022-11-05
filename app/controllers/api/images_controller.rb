@@ -13,8 +13,8 @@ module Api
       end
     end
 
-    def create 
-      #img = Cloudinary::Uploader.upload(params[:image])
+    def create
+      # img = Cloudinary::Uploader.upload(params[:image])
     end
   end
 end
