@@ -1,24 +1,46 @@
-# README
+[![hire-badge](https://img.shields.io/badge/Consult%20/%20Hire%20Theophile-Click%20to%20Contact-brightgreen)](mailto:fadhili.kango@gmail.com ) [![Twitter Follow](https://img.shields.io/twitter/follow/Theophadh?label=Follow%20Theophile%20on%20Twitter&style=social)](https://twitter.com/Theophadh)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Image Gallery App (API)
 
-Things you may want to cover:
+> The app can help to store images online with details
 
-* Ruby version
+## API
+[API Endpoint](https://image-gallery-app-api.herokuapp.com/)
+## Frontend
+[Frontend Repo](https://github.com/Theophile-Kango/image-gallery-front)
+## Built With
 
-* System dependencies
+- ruby 3.1.0
+- Ruby on rails 6.1.7
+- Postgresql database
+- Cloudinary for image storage
 
-* Configuration
+## Prerequisites
 
-* Database creation
+- Get ruby 3.1.0 installed
+- Get ruby on rails 6.1.7
+- Get postgresql installed
+- Cloudinary api keys <br />
+  You can get your cloudinary.yml configuration <a href="https://cloudinary.com/console/cloudinary.yml">here</a>
 
-* Database initialization
+### Setup
 
-* How to run the test suite
+- Clone the repository on your local machine
+- cd into the folder
+- Create a .env file at the root of the project with variables. fill the varialbes with info from the yml downloaded file
 
-* Services (job queues, cache servers, search engines, etc.)
+  - CLOUD_NAME: "cloudinary name"
+  - API_KEY: "api key"
+  - API_SECRET: "api secret"
+  - USER_NAME: "postgres username"
+  - PASSWORD: "postgres password"
+- run bundle install
+- run rails db:create<br />
+  The command will create the development database as well as the test database
+- run rails db:migrate
+- run rails server
+- If everything is correct, the server will run on port 3000
 
-* Deployment instructions
+## Run the test 
 
-* ...
+- You can run `bundle exec rspec spec` to execute the unit tests
