@@ -1,17 +1,20 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: theophile
+  username: <%= ENV['USER_NAME'] %>
+  password: <%= ENV['PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
   database: image_gallery_api_development
-  username: theophile
+  username: <%= ENV['USER_NAME'] %>
+  password: <%= ENV['PASSWORD'] %>
 test:
   <<: *default
   database: image_gallery_api_test
-  username: theophile
+  username: <%= ENV['USER_NAME'] %>
+  password: <%= ENV['PASSWORD'] %>
 production:
   <<: *default
   database: image_gallery_api_production
